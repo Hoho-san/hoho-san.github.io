@@ -1,0 +1,222 @@
+:root {
+    --main-color: #256d8f;
+    --black: #0000009a;
+    --bg: #010103;
+    --border: 0.2rem solid rgba(0, 0, 0, 0.979);
+    --buttoncolor: #000000;
+}
+* {
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/* Scroll Bar */
+
+html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+    background-color: #000000;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10rem;
+}
+
+body {
+    background: url(/images/background.webp) no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    display: block;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+/* Header */
+
+.header {
+    background: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.header .logo img {
+    height: 6rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.header .navbar a:hover {
+    background-color: var(--buttoncolor);
+    transition-delay: 0.1s;
+}
+
+/* About me */
+
+.aboutme {
+    color: rgb(255, 255, 255);
+    border-bottom: 8px solid #3f3f3f;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 200px 5% 200px 5%;
+}
+
+.aboutme h1 {
+    flex: 0 1 auto;
+    height: 100%;
+    width: 50%;
+    font-size: 3.125rem;
+}
+.aboutme p {
+    font-size: 2.1rem;
+    padding: 10px;
+    margin: 2rem;
+    display: inline;
+    width: 50%;
+}
+
+/* Certificate */
+
+.certificate {
+    font-size: 2rem;
+    background-color: #000000;
+    padding: 50px 5%;
+    border-bottom: 8px solid #3f3f3f;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+}
+.certificate .myCertificate .certificate_title img {
+    border-radius: 30px;
+}
+.certificate h1 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.certificate .myCertificate {
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 10rem;
+}
+.certificate .myCertificate .certificate_title {
+    font-size: 1.2rem;
+}
+.certificate .myCertificate .cert_image {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    height: 25rem;
+}
+.certificate .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.certificate .popup-image span {
+    position: absolute;
+    top: 85px;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 100;
+}
+.certificate .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 750px;
+    object-fit: cover;
+}
+/* Footer */
+
+.footer {
+    background: var(--black);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 100px 5% 100px 5%;
+}
+.footer h1 {
+    width: 50%;
+    padding: 200px;
+    font-weight: 400;
+    font-size: 3.125rem;
+    color: #000000;
+}
+.footer .contact_me {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.637);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+.footer .contact_me a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    color: rgb(3, 0, 0);
+    border: var(--border);
+    margin: 1rem;
+    border-radius: 30%;
+}
+
+.footer .contact_me a:hover {
+    background-color: var(--buttoncolor);
+    color: rgb(255, 255, 255);
+    transition-delay: 0.1s;
+}
