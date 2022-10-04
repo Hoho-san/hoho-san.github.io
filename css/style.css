@@ -48,10 +48,6 @@ body {
     display: block;
 }
 
-section {
-    padding: 2rem 7%;
-}
-
 /* Header */
 
 .header {
@@ -80,8 +76,9 @@ section {
 }
 
 .header .navbar a:hover {
-    background-color: var(--buttoncolor);
-    transition-delay: 0.1s;
+    background-color: white;
+    color: #000000;
+    transition-delay: 0.2s;
 }
 
 /* About me */
@@ -97,10 +94,16 @@ section {
 }
 
 .aboutme h1 {
-    flex: 0 1 auto;
+    display: grid;
+    justify-items: center;
     height: 100%;
     width: 50%;
-    font-size: 3.125rem;
+    font-size: 5rem;
+}
+.aboutme h1 .title_name {
+    font-size: 3rem;
+    color: red;
+    font-weight: 300;
 }
 .aboutme p {
     font-size: 2.1rem;
@@ -134,10 +137,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
     text-align: center;
-    border: var(--border);
-    border-radius: 20px;
     padding: 50px;
-    margin-bottom: 10rem;
 }
 .certificate .myCertificate .certificate_title {
     font-size: 1.2rem;
@@ -173,23 +173,25 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    width: 750px;
+    width: 1000px;
     object-fit: cover;
 }
 /* Footer */
 
 .footer {
     background: var(--black);
+    display: flex;
     text-align: center;
     align-items: center;
-    display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 100px 5% 100px 5%;
+    padding: 50px 5% 50px 5%;
 }
 .footer h1 {
+    display: grid;
+    align-items: center;
     width: 50%;
-    padding: 200px;
+    padding: 75px 0 75px 0;
     font-weight: 400;
     font-size: 3.125rem;
     color: #000000;
@@ -219,4 +221,95 @@ section {
     background-color: var(--buttoncolor);
     color: rgb(255, 255, 255);
     transition-delay: 0.1s;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .aboutme {
+        display: block;
+        margin: 0 auto;
+        padding: 100px 5% 100px 5%;
+    }
+    .aboutme h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 50px 5% 50px 5%;
+    }
+    .footer h1 {
+        width: 50%;
+        padding: 100px 0 100px 0;
+    }
+}
+@media (max-width: 768px) {
+    .aboutme {
+        padding: 100px 5% 100px 5%;
+    }
+    .footer h1 {
+        width: 50%;
+    }
+    .certificate .popup-image img {
+        width: 95%;
+    }
+}
+@media (max-width: 600px) {
+    .header .navbar a {
+        font-size: 1.2rem;
+    }
+    .aboutme h1 {
+        font-size: 5rem;
+        font-weight: 400;
+    }
+    .aboutme p {
+        font-size: 1.75rem;
+        padding: 10px;
+        margin: 2rem;
+        display: inline;
+        width: 50%;
+    }
+
+    .certificate {
+        font-size: 1rem;
+        padding: 10px 5%;
+        border-bottom: 4px solid #3f3f3f;
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .certificate .myCertificate .certificate_title img {
+        border-radius: 30px;
+    }
+    .certificate .myCertificate {
+        display: grid;
+        align-items: end;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 10px;
+    }
+    .certificate .myCertificate .certificate_title {
+        font-size: 1rem;
+    }
+    .certificate .myCertificate .cert_image {
+        padding: 2rem;
+        margin-bottom: 2rem;
+        height: 20rem;
+    }
+    .footer {
+        padding: 20px 5% 20px 5%;
+    }
+    .footer .contact_me {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer h1 {
+        font-size: 2rem;
+        width: 60%;
+        padding: 10px 0 10px 0;
+    }
 }
