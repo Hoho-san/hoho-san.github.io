@@ -97,8 +97,8 @@ body {
     margin: 0 auto;
     padding: 20px 5% 20px 5%;
 }
-.aboutme image {
-    width: 40%;
+.aboutme image img {
+    width: 30%;
 }
 .aboutme h1 {
     display: grid;
@@ -151,7 +151,6 @@ body {
     padding: 10px;
     margin: 2rem;
     display: inline;
-    width: 75%;
 }
 .description .des-container .des-content h2 {
     color: red;
@@ -168,9 +167,6 @@ body {
     justify-content: center;
     margin: 0 auto;
 }
-.certificate .myCertificate .certificate_title img {
-    border-radius: 30px;
-}
 .certificate h1 {
     margin-top: 0;
     margin-bottom: 2rem;
@@ -182,6 +178,10 @@ body {
     gap: 1.5rem;
     text-align: center;
     padding: 50px;
+}
+
+.certificate .myCertificate .certificate_title img {
+    border-radius: 30px;
 }
 .certificate .myCertificate .certificate_title {
     font-size: 1.2rem;
