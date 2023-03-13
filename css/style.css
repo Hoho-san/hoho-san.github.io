@@ -86,24 +86,31 @@ body {
 .aboutme {
     color: rgb(255, 255, 255);
     border-bottom: 8px solid #3f3f3f;
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 200px 5% 200px 5%;
+    padding: 20px 5% 20px 5%;
 }
-
+.aboutme image {
+    width: 40%;
+}
 .aboutme h1 {
     display: grid;
     justify-items: center;
     height: 100%;
-    width: 50%;
+
     font-size: 5rem;
 }
 .aboutme h1 .title_name {
     font-size: 3rem;
     color: red;
-    font-weight: 300;
+    font-weight: 400;
+}
+.aboutme h1 .typed {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 .aboutme p {
     font-size: 2.1rem;
@@ -111,6 +118,38 @@ body {
     margin: 2rem;
     display: inline;
     width: 50%;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 5% 20px 5%;
+    font-size: large;
+}
+.description .des-title {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+    margin: 2rem;
+}
+.description .des-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.description .des-container .des-content {
+    width: 100%;
+    font-size: 2rem;
+    padding: 10px;
+    margin: 2rem;
+    display: inline;
+    width: 75%;
+}
+.description .des-container .des-content h2 {
+    color: red;
 }
 
 /* Certificate */
