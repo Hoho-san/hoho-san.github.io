@@ -15,6 +15,7 @@
     text-decoration: none;
     transition: 0.2s linear;
     color: #fff;
+    /* border: 1px solid rgba(255, 0, 0, 0.842); */
 }
 
 html {
@@ -41,7 +42,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(12, 12, 12);
     background-blend-mode: multiply;
     display: block;
 }
@@ -96,15 +97,19 @@ body {
     justify-content: space-between;
     margin: 0 auto;
     padding: 20px 5% 20px 5%;
+    height: 100vh;
 }
-.aboutme image img {
-    width: 30%;
+.aboutme .phase1 {
+    width: 50%;
+}
+
+.aboutme .image img {
+    height: 75vh;
 }
 .aboutme h1 {
     display: grid;
-    justify-items: center;
+    justify-items: self-start;
     height: 100%;
-
     font-size: 5rem;
 }
 .aboutme h1 .title_name {
@@ -117,6 +122,37 @@ body {
     color: rgb(255, 255, 255);
     font-weight: 600;
 }
+
+.aboutme .logo {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    width: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+}
+
+.aboutme .logo a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    border: 0.1rem solid rgb(255, 255, 255);
+    margin: 1.5rem;
+    border-radius: 30%;
+}
+
+.aboutme .logo a:hover {
+    background-color: white;
+    border: var(--border);
+    color: rgb(0, 0, 0);
+    transition-delay: 0.1s;
+}
+
 .aboutme p {
     font-size: 2.1rem;
     padding: 10px;
@@ -127,9 +163,10 @@ body {
 .description {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-content: center;
     padding: 20px 5% 20px 5%;
     font-size: large;
+    height: 100vh;
 }
 .description .des-title {
     display: flex;
@@ -220,53 +257,6 @@ body {
     width: 1000px;
     object-fit: cover;
 }
-/* Footer */
-
-.footer {
-    background: var(--black);
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 50px 5% 50px 5%;
-}
-.footer h1 {
-    display: grid;
-    align-items: center;
-    width: 50%;
-    padding: 75px 0 75px 0;
-    font-weight: 400;
-    font-size: 3.125rem;
-    color: #000000;
-}
-.footer .contact_me {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.637);
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    border-radius: 25px;
-}
-.footer .contact_me a {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2.5rem;
-    color: rgb(3, 0, 0);
-    border: var(--border);
-    margin: 1rem;
-    border-radius: 30%;
-}
-
-.footer .contact_me a:hover {
-    background-color: var(--buttoncolor);
-    color: rgb(255, 255, 255);
-    transition-delay: 0.1s;
-}
-
 /* Media Queries */
 @media (max-width: 991px) {
     .aboutme {
@@ -340,20 +330,5 @@ body {
         padding: 2rem;
         margin-bottom: 2rem;
         height: 20rem;
-    }
-    .footer {
-        padding: 20px 5% 20px 5%;
-    }
-    .footer .contact_me {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .footer h1 {
-        font-size: 2rem;
-        width: 60%;
-        padding: 10px 0 10px 0;
     }
 }
