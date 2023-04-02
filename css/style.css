@@ -111,6 +111,21 @@ body {
     width: 50%;
 }
 
+.home .phase1 h1 .Ghost {
+    position: absolute;
+    height: 50px;
+    width: auto;
+    left: 25%;
+    mix-blend-mode: exclusion;
+    animation: ghost 15s ease-in-out infinite;
+}
+
+@keyframes ghost {
+    to {
+        left: -20%;
+    }
+}
+
 .home .image img {
     height: 75vh;
 }
